@@ -1,16 +1,16 @@
 {
-  "main.css": "/WECOOP/static/css/main.e79f3011.chunk.css",
-  "main.js": "/WECOOP/static/js/main.f2067d94.chunk.js",
-  "main.js.map": "/WECOOP/static/js/main.f2067d94.chunk.js.map",
+  "main.css": "/WECOOP/static/css/main.23329a42.chunk.css",
+  "main.js": "/WECOOP/static/js/main.2a126456.chunk.js",
+  "main.js.map": "/WECOOP/static/js/main.2a126456.chunk.js.map",
   "runtime~main.js": "/WECOOP/static/js/runtime~main.03b113ac.js",
   "runtime~main.js.map": "/WECOOP/static/js/runtime~main.03b113ac.js.map",
   "static/css/2.769d571d.chunk.css": "/WECOOP/static/css/2.769d571d.chunk.css",
   "static/js/2.a8c58902.chunk.js": "/WECOOP/static/js/2.a8c58902.chunk.js",
   "static/js/2.a8c58902.chunk.js.map": "/WECOOP/static/js/2.a8c58902.chunk.js.map",
   "index.html": "/WECOOP/index.html",
-  "precache-manifest.6d6264dbd098791e80710f71688de7bc.js": "/WECOOP/precache-manifest.6d6264dbd098791e80710f71688de7bc.js",
+  "precache-manifest.496f3f434bd81a3cca4d5db024d93e33.js": "/WECOOP/precache-manifest.496f3f434bd81a3cca4d5db024d93e33.js",
   "service-worker.js": "/WECOOP/service-worker.js",
   "static/css/2.769d571d.chunk.css.map": "/WECOOP/static/css/2.769d571d.chunk.css.map",
-  "static/css/main.e79f3011.chunk.css.map": "/WECOOP/static/css/main.e79f3011.chunk.css.map",
+  "static/css/main.23329a42.chunk.css.map": "/WECOOP/static/css/main.23329a42.chunk.css.map",
   "static/media/font-awesome.css": "/WECOOP/static/media/fontawesome-webfont.fee66e71.woff"
 }
