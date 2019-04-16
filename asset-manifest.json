@@ -1,16 +1,16 @@
 {
-  "main.css": "/WECOOP/static/css/main.23329a42.chunk.css",
-  "main.js": "/WECOOP/static/js/main.1de999cd.chunk.js",
-  "main.js.map": "/WECOOP/static/js/main.1de999cd.chunk.js.map",
+  "main.css": "/WECOOP/static/css/main.57e671d5.chunk.css",
+  "main.js": "/WECOOP/static/js/main.47df4071.chunk.js",
+  "main.js.map": "/WECOOP/static/js/main.47df4071.chunk.js.map",
   "runtime~main.js": "/WECOOP/static/js/runtime~main.03b113ac.js",
   "runtime~main.js.map": "/WECOOP/static/js/runtime~main.03b113ac.js.map",
   "static/css/2.769d571d.chunk.css": "/WECOOP/static/css/2.769d571d.chunk.css",
-  "static/js/2.a8c58902.chunk.js": "/WECOOP/static/js/2.a8c58902.chunk.js",
-  "static/js/2.a8c58902.chunk.js.map": "/WECOOP/static/js/2.a8c58902.chunk.js.map",
+  "static/js/2.48674986.chunk.js": "/WECOOP/static/js/2.48674986.chunk.js",
+  "static/js/2.48674986.chunk.js.map": "/WECOOP/static/js/2.48674986.chunk.js.map",
   "index.html": "/WECOOP/index.html",
-  "precache-manifest.0bbd6f36d0b667d15cdac52ffcedd0c2.js": "/WECOOP/precache-manifest.0bbd6f36d0b667d15cdac52ffcedd0c2.js",
+  "precache-manifest.123c04a50b2f772f5e2742a545aa555f.js": "/WECOOP/precache-manifest.123c04a50b2f772f5e2742a545aa555f.js",
   "service-worker.js": "/WECOOP/service-worker.js",
   "static/css/2.769d571d.chunk.css.map": "/WECOOP/static/css/2.769d571d.chunk.css.map",
-  "static/css/main.23329a42.chunk.css.map": "/WECOOP/static/css/main.23329a42.chunk.css.map",
+  "static/css/main.57e671d5.chunk.css.map": "/WECOOP/static/css/main.57e671d5.chunk.css.map",
   "static/media/font-awesome.css": "/WECOOP/static/media/fontawesome-webfont.fee66e71.woff"
 }

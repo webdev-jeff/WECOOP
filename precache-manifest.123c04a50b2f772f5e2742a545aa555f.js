@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "82688dfa1b51948b2e2f",
-    "url": "/WECOOP/static/css/main.23329a42.chunk.css"
+    "revision": "4fabe9a881e6aa351e29",
+    "url": "/WECOOP/static/css/main.57e671d5.chunk.css"
   },
   {
-    "revision": "82688dfa1b51948b2e2f",
-    "url": "/WECOOP/static/js/main.1de999cd.chunk.js"
+    "revision": "4fabe9a881e6aa351e29",
+    "url": "/WECOOP/static/js/main.47df4071.chunk.js"
   },
   {
     "revision": "311267bae6763f30a2d6",
     "url": "/WECOOP/static/js/runtime~main.03b113ac.js"
   },
   {
-    "revision": "37a6116aecbeb718815e",
+    "revision": "21f32355781002cd8be1",
     "url": "/WECOOP/static/css/2.769d571d.chunk.css"
   },
   {
-    "revision": "37a6116aecbeb718815e",
-    "url": "/WECOOP/static/js/2.a8c58902.chunk.js"
+    "revision": "21f32355781002cd8be1",
+    "url": "/WECOOP/static/js/2.48674986.chunk.js"
   },
   {
     "revision": "af7ae505a9eed503f8b8e6982036873e",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/WECOOP/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "d9794180432449f8dabf9cf3fafa7ba0",
+    "revision": "f1b20be5f1b3efcfe13725bb86093112",
     "url": "/WECOOP/index.html"
   }
 ];
