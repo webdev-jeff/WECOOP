@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardHeader } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-function RenderRepositoryListForDeveloper({ repo }) {
+function RenderRepositoryListForDeveloper({ repo, stages }) {
   return (
 
     <div className="col-6 mt-5">
       <Card>
         <CardHeader className="bg-dark text-white">
-          repo.title
-            <button className="btn btn-light btn-sm" src="" style={{ position: 'absolute', right: 5 }}>Work on</button>
+          {repo.name}
+          <Link to={`/repository/${repo.id}`}>
+            <span className="btn btn-light btn-sm" style={{ position: 'absolute', right: 5 }}> Work on</span>
+          </Link>
         </CardHeader>
         <CardBody>
           <div className="container pl-0 pr-0 ml-0 mr-0">
             <div className="row pl-0 pr-0 ml-0 mr-0">
               <div className="col-12 col-md-7 offset-1">
-                <p>repo.description</p>
+                <p><b>Stage: </b>{stages[repo.stage]}</p>
+                <p>{repo.description}</p>
               </div>
             </div>
           </div>
@@ -30,18 +34,20 @@ class Repository extends Component {
 
   constructor(props) {
     super(props);
+    this.stages = ['Requirements', 'Design', 'Development', 'Verification', 'Documentation', 'Maintenance']
+    this.repositories = props.repositories
     this.user = "developer";
   }
   render() {
-    const repo = "";
+    const repos = this.repositories.map((repo) =>
+      <RenderRepositoryListForDeveloper key={repo.id} repo={repo} stages={this.stages} />
+    );
     return (
       <div className="container-fluid">
         <div className="row align-items-center" style={{ paddingTop: 100 }}>
         </div>
         <div className="row align-items-center ml-0 mr-0 pl-0 pr-0">
-          {RenderRepositoryListForDeveloper(repo)}
-          {RenderRepositoryListForDeveloper(repo)}
-          {RenderRepositoryListForDeveloper(repo)}
+          {repos}
         </div>
       </div>
     );

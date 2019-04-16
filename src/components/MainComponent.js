@@ -14,21 +14,30 @@ import { PRICING } from '../shared/pricing';
 import { USERS } from '../shared/users';
 import { FEATURES } from '../shared/features';
 import Contact from './ContactusComponent';
+import { REPOSITORIES } from '../shared/repositories';
+import RepoDetail from './RepoDetailComponent';
+import { PROJECTS } from '../shared/projects';
 
 
 class Main extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       prices: PRICING,
       users: USERS,
       location: props.location,
       transparentHeader: ['/home', '/pricing'],
-      features: FEATURES
+      features: FEATURES,
+      repositories: REPOSITORIES,
+      projects: PROJECTS
     }
   }
   render() {
-
+    const RepoWithId = ({ match }) => {
+      return (
+        <RepoDetail repo={this.state.repositories.filter((repo) => repo.id === parseInt(match.params.repoId, 10))[0]} />
+      );
+    }
     return (
       <div>
         {/* <Header /> */}
@@ -42,16 +51,17 @@ class Main extends Component {
         </Switch> */}
         {this.state.transparentHeader.indexOf(this.state.location) < 0 ? <Header users={this.state.users} transparent={false} /> : <Header users={this.state.users} transparent={true} />}
         <Switch>
-        <Route path="/home" component={Home} />
+          <Route path="/home" component={Home} />
           <Route path="/features" component={() => <Features features={this.state.features} />} />
           <Route exact path="/" render={() => (<Redirect to="/home" />)} />
           <Route path="/pricing" component={() => <Pricing prices={this.state.prices} />} />
-          <Route path="/project" component={Project} />
-          <Route exact path="/repository" component={Repository} />
+          <Route path="/project" component={() => <Project projects={this.state.projects} />} />
+          <Route exact path="/repository" component={() => <Repository repositories={this.state.repositories} />} />
+          <Route path="/repository/:repoId" component={RepoWithId} />
           <Route path="/contactus" component={Contact} />
-          <Route component={Home} />
+          <Route component={NotFound} />
         </Switch>
-          
+
         {/* <Footer /> */}
       </div>
     );

@@ -9,12 +9,12 @@ export const FEATURES = [
     "id": 1,
     "name": "Big Data Analysis",
     "texture": "texture-2",
-    "description": "balablalalllll"
+    "description": "We provide Big Data Analytics to the users who look for the way to improve their service. By analyzing the Big Data, we gain the trends and both negative and positive aspects of the service to let developers know how to make an improvement."
   },
   {
     "id": 2,
     "name": "Automatic Code Checking",
     "texture": "texture-3",
-    "description": "We integrate automatic code checking tools to alleviate the trust issue between ideaers and developers."
+    "description": "We integrate automatic code checking tools to alleviate the trust issue between idea providers and programmers. Works done by one of the team members have to gain the consent from all other team members to move forward of other stage."
   }
 ];

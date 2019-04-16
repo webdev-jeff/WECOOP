@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Halo';
-  src: url('/WECOOP/assets/fonts/Halo.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-   url('/WECOOP/assets/fonts/Halo.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  src: url('/assets/fonts/Halo.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   url('/assets/fonts/Halo.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 .banner {
@@ -14,7 +14,7 @@
 }
 
 .banner-1{
-  background-image: url('/WECOOP/assets/images/home.jpg');
+  background-image: url('/assets/images/home.jpg');
   height: 100vh;
 }
 
@@ -47,6 +47,11 @@
 
 .title-center{
   position: center;
+}
+
+.title-center2{
+  position: absolute;
+  padding-top: 240px;
 }
 
 .title-bottom{
@@ -99,23 +104,23 @@
   /* background-repeat: no-repeat; */
   
   /* Also, hey, I hate hot-linking this, but uh... I'll upload my own asset soon? 😬 */
-  background-image: url("/WECOOP/assets/images/texture1.jpg");
+  background-image: url("/assets/images/texture1.jpg");
 }
 .texture-2{
   color: purple;
-  background-image: url("/WECOOP/assets/images/texture2.jpg");
+  background-image: url("/assets/images/texture2.jpg");
 }
 .texture-3{
   color: skyblue;
-  background-image: url("/WECOOP/assets/images/texture6.jpg");
+  background-image: url("/assets/images/texture6.jpg");
 }
 .texture-4{
   color: #e5895f;
-  background-image: url("/WECOOP/assets/images/texture9.jpg");
+  background-image: url("/assets/images/texture9.jpg");
 }
 .texture-5{
   color: #e5895f;
-  background-image: url("/WECOOP/assets/images/texture8.jpg");
+  background-image: url("/assets/images/texture8.jpg");
 }
 .big-type { 
   /* Copied almost wholesale from the Apple site CSS; changed the font-stack */
@@ -127,9 +132,15 @@
 
 .wecoop{
   color: whitesmoke;
-  /* background-image: url("/WECOOP/assets/images/wecoop-bg-img.jpg"); */
+  /* background-image: url("/assets/images-bg-img.jpg"); */
   font-family: "Halo";
   /* text-shadow: -0.06em 0 red, 0.06em 0 cyan; */
 }
 
- 
+.text-green{
+  color: green;
+}
+
+.text-red{
+  color: red;
+}
