@@ -97,7 +97,7 @@ class Header extends Component {
       <div className="container">
             <NavbarToggler onClick={this.toggleNav} />
             <NavbarBrand className="mr-auto" href="/">
-              <img src="/WECOOP/assets/images/wecoop-logo.png" height="30" width="30" alt="WECOOP" />
+              <img src="/assets/images/wecoop-logo.png" height="30" width="30" alt="WECOOP" />
             </NavbarBrand>
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>

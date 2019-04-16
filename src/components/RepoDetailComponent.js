@@ -21,7 +21,7 @@ class RepoDetail extends Component {
       repoContent.innerHTML=`
       <div class="row align-items-center">
       <div class="col-2 offset-2 title-center2">
-        <img src="/WECOOP/assets/images/right-tick.png" />
+        <img src="/assets/images/right-tick.png" />
       </div>
       <div class="col-6 title-center2">
         <h1 class="text-center text-white">You have finished this part!</h1>
@@ -29,7 +29,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center mt-5">
       <div class="col" align="center">
-      <a class="btn btn-primary text-white" href="/WECOOP/assets/download/requirement.pdf" target="_blank">Download the requirement</a>
+      <a class="btn btn-primary text-white" href="/assets/download/requirement.pdf" target="_blank">Download the requirement</a>
       </div>
       </div>
       `;
@@ -37,7 +37,7 @@ class RepoDetail extends Component {
       repoContent.innerHTML=`
       <div class="row mt-5">
         <div class="col">
-          <embed src="/WECOOP/assets/download/requirement.pdf" width="960px" height="480px" />
+          <embed src="/assets/download/requirement.pdf" width="960px" height="480px" />
         </div>
       </div>
       <div class="row mt-2">
@@ -56,7 +56,7 @@ class RepoDetail extends Component {
       repoContent.innerHTML=`
       <div class="row align-items-center">
       <div class="col-2 offset-2 title-center2">
-        <img src="/WECOOP/assets/images/right-tick.png" />
+        <img src="/assets/images/right-tick.png" />
       </div>
       <div class="col-6 title-center2">
         <h1 class="text-center text-white">You have finished this part!</h1>
@@ -64,7 +64,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center mt-5">
       <div class="col" align="center">
-      <a class="btn btn-primary text-white" href="/WECOOP/assets/download/design.pdf" target="_blank">Download the design</a>
+      <a class="btn btn-primary text-white" href="/assets/download/design.pdf" target="_blank">Download the design</a>
       </div>
       </div>
       `;
@@ -72,7 +72,7 @@ class RepoDetail extends Component {
       repoContent.innerHTML=`
       <div class="row mt-5">
         <div class="col">
-          <embed src="/WECOOP/assets/download/design.pdf" width="960px" height="480px" />
+          <embed src="/assets/download/design.pdf" width="960px" height="480px" />
         </div>
       </div>
       <div class="row mt-2">
@@ -89,7 +89,7 @@ class RepoDetail extends Component {
       repoContent.innerHTML=`
       <div class="row align-items-center">
       <div class="col-2 offset-2 title-center2">
-        <img src="/WECOOP/assets/images/right-tick.png" />
+        <img src="/assets/images/right-tick.png" />
       </div>
       <div class="col-6 title-center2">
         <h1 class="text-center text-white">You have finished this part!</h1>
@@ -97,7 +97,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center mt-5">
       <div class="col" align="center">
-      <a class="btn btn-primary text-white" href="/WECOOP/assets/download/design.pdf" target="_blank">Download the design</a>
+      <a class="btn btn-primary text-white" href="/assets/download/design.pdf" target="_blank">Download the design</a>
       </div>
       </div>
       `;
@@ -122,7 +122,7 @@ class RepoDetail extends Component {
       repoContent.innerHTML=`
       <div class="row align-items-center mt-5">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/right-tick.png" />
+          <img src="/assets/images/right-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-green">Build passed!</h1>
@@ -130,7 +130,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/right-tick.png" />
+          <img src="/assets/images/right-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-green">Pressure test passed!</h1>
@@ -138,7 +138,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/right-tick.png" />
+          <img src="/assets/images/right-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-green">Multi-platform test passed!</h1>
@@ -146,7 +146,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/right-tick.png" />
+          <img src="/assets/images/right-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-green">ABC test passed!</h1>
@@ -154,7 +154,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/right-tick.png" />
+          <img src="/assets/images/right-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-green">DEF test passed!</h1>
@@ -165,7 +165,7 @@ class RepoDetail extends Component {
       repoContent.innerHTML=`
       <div class="row align-items-center mt-5">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/right-tick.png" />
+          <img src="/assets/images/right-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-green">Build passed!</h1>
@@ -173,7 +173,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/right-tick.png" />
+          <img src="/assets/images/right-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-green">Pressure test passed!</h1>
@@ -181,7 +181,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/right-tick.png" />
+          <img src="/assets/images/right-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-green">Multi-platform test passed!</h1>
@@ -189,7 +189,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/wrong-tick.png" />
+          <img src="/assets/images/wrong-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-red">ABC test failed!</h1>
@@ -197,7 +197,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row align-items-center">
         <div class="col-2 offset-2">
-          <img src="/WECOOP/assets/images/right-tick.png" />
+          <img src="/assets/images/right-tick.png" />
         </div>
         <div class="col-8">
           <h1 class="text-green">DEF test passed!</h1>
@@ -233,7 +233,7 @@ class RepoDetail extends Component {
             <Button color={(this.repo.stage > 6 ? "primary" : "danger")} onClick={() => this.onRadioBtnClick(6)} active={this.state.rSelected === 6}>Maintenance</Button>
           </ButtonGroup>
           <Button className="ml-5" color="warning">Get Insight</Button>
-          <a className="ml-5 btn btn-warning" href="/WECOOP/assets/download/wecoop-toolkit.exe">Get Toolkit</a>
+          <a className="ml-5 btn btn-warning" href="/assets/download-toolkit.exe">Get Toolkit</a>
           </div>
           </div>
           <div className="align-items-center" id="repoContent">
