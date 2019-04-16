@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "f54cdf299eea6bda0c24",
+    "revision": "82688dfa1b51948b2e2f",
     "url": "/WECOOP/static/css/main.23329a42.chunk.css"
   },
   {
-    "revision": "f54cdf299eea6bda0c24",
-    "url": "/WECOOP/static/js/main.c8068504.chunk.js"
+    "revision": "82688dfa1b51948b2e2f",
+    "url": "/WECOOP/static/js/main.1de999cd.chunk.js"
   },
   {
     "revision": "311267bae6763f30a2d6",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/WECOOP/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "ead031883a8f9d818256b349b0610201",
+    "revision": "d9794180432449f8dabf9cf3fafa7ba0",
     "url": "/WECOOP/index.html"
   }
 ];
