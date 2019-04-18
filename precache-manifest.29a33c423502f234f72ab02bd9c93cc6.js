@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "4fabe9a881e6aa351e29",
-    "url": "/WECOOP/static/css/main.57e671d5.chunk.css"
+    "revision": "3f329a55cb1cfc49c639",
+    "url": "/WECOOP/static/css/main.bfdb0c2a.chunk.css"
   },
   {
-    "revision": "4fabe9a881e6aa351e29",
-    "url": "/WECOOP/static/js/main.47df4071.chunk.js"
+    "revision": "3f329a55cb1cfc49c639",
+    "url": "/WECOOP/static/js/main.f5c94425.chunk.js"
   },
   {
     "revision": "311267bae6763f30a2d6",
     "url": "/WECOOP/static/js/runtime~main.03b113ac.js"
   },
   {
-    "revision": "21f32355781002cd8be1",
+    "revision": "b80ff5e32b7751f47dbb",
     "url": "/WECOOP/static/css/2.769d571d.chunk.css"
   },
   {
-    "revision": "21f32355781002cd8be1",
-    "url": "/WECOOP/static/js/2.48674986.chunk.js"
+    "revision": "b80ff5e32b7751f47dbb",
+    "url": "/WECOOP/static/js/2.543a0219.chunk.js"
   },
   {
     "revision": "af7ae505a9eed503f8b8e6982036873e",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/WECOOP/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "f1b20be5f1b3efcfe13725bb86093112",
+    "revision": "ff5f69dd0e375a115771ef2dd9645c67",
     "url": "/WECOOP/index.html"
   }
 ];
