@@ -39,14 +39,20 @@ function RenderFeature({feature}){
   return (
     <div className="row align-items-center banner banner-2 ml-0 mr-0 pl-0 pr-0">
       <div className={titleClass}>
-        {feature.id % 2 == 0
+        {feature.id % 2 === 0
         ? <p className="font-weight-bold title-large text-center mb-0">{feature.name}</p>
-        : <p className="text-white mt-0 mr-5">{feature.description}</p>}
+        : <p className="mt-0 mr-5">
+            <span className="feature-text-1">{feature.description} </span>
+            <span className="feature-text-2">{feature.description_followup}</span>
+          </p>}
       </div>
       <div className={titleClass}>
-        {feature.id % 2 != 0
+        {feature.id % 2 !== 0
         ? <p className="font-weight-bold title-large text-center mb-0">{feature.name}</p>
-        : <p className="text-white mt-0 mr-5">{feature.description}</p>}
+        : <p className="mt-0 mr-5">
+            <span className="feature-text-1">{feature.description} </span>
+            <span className="feature-text-2">{feature.description_followup}</span>
+          </p>}
       </div>
     </div>
   )

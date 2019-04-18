@@ -17,7 +17,8 @@ import Contact from './ContactusComponent';
 import { REPOSITORIES } from '../shared/repositories';
 import RepoDetail from './RepoDetailComponent';
 import { PROJECTS } from '../shared/projects';
-
+import NotLogin from './NotLoginComponent';
+import PrivateRoute from './PrivateRoute';
 
 class Main extends Component {
   constructor(props) {
@@ -59,6 +60,7 @@ class Main extends Component {
           <Route exact path="/repository" component={() => <Repository repositories={this.state.repositories} />} />
           <Route path="/repository/:repoId" component={RepoWithId} />
           <Route path="/contactus" component={Contact} />
+          <Route path="/notlogin" component={NotLogin} />
           <Route component={NotFound} />
         </Switch>
 

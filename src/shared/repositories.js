@@ -34,5 +34,11 @@ export const REPOSITORIES = [
     "stage": 6,
     "name": "a sixth school",
     "description": "I read in a sixth school"
+  },
+  {
+    "id": 6,
+    "stage": 7,
+    "name": "a seventh school",
+    "description": "I read in a seventh school"
   }
 ]

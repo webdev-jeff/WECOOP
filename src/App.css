@@ -144,3 +144,14 @@
 .text-red{
   color: red;
 }
+
+.feature-text-1{
+  font-size: 25px;
+  color: whitesmoke;
+  font-weight: 600
+}
+
+.feature-text-2{
+  font-size: 25px;
+  font-weight: 200
+}

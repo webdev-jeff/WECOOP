@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Button, ButtonGroup } from 'reactstrap';
 import { Link } from 'react-router-dom';
-
+import { cookie } from '../shared/cookie';
 
 class RepoDetail extends Component {
   constructor(props) {
@@ -15,6 +15,8 @@ class RepoDetail extends Component {
     this.renderDesign = this.renderDesign.bind(this);
     this.renderDevelopment = this.renderDevelopment.bind(this);
     this.renderVerification = this.renderVerification.bind(this);
+    this.renderDocumentation = this.renderDocumentation.bind(this);
+    this.renderMaintenance = this.renderMaintenance.bind(this);
   }
   renderRequirement(repoContent, finished){
     if (finished) {
@@ -33,22 +35,46 @@ class RepoDetail extends Component {
       </div>
       </div>
       `;
-    } else {
+    } else if (cookie.get("developer") === "true"){
       repoContent.innerHTML=`
       <div class="row mt-5">
-        <div class="col">
+        <div class="col" align="center">
           <embed src="/assets/download/requirement.pdf" width="960px" height="480px" />
         </div>
       </div>
       <div class="row mt-2">
-      <div class="col-12">
+      <div class="col-12" align="center">
       <span class="text-white">Are you satisfied with the requirement?</span>
       <button class="btn btn-success ml-2">Yes, go to the next stage</button>
       <button class="btn btn-danger ml-2">No, contact the ideaer</button>
       </div>
+      </div>
+      `;
+    } else if (cookie.get("ideaer") === "true"){
+      repoContent.innerHTML=`
+      <div class="row mt-5">
+        <div class="col" align="center">
+          <embed src="/assets/download/requirement.pdf" width="960px" height="480px" />
+        </div>
+      </div>
+      <div class="row mt-2">
+      <div class="col-12" align="center">
+      <p class="text-white">You have successfully uploaded your idea!</p>
+      <p class="text-white">Pending for others' agreement <span id="wait>...</span> 6 / 10</p>
+      </div>
           
       </div>
       `;
+      // const s = document.createElement('script');
+      // s.type = 'text/javascript';
+      // s.innerHTML = `window.setInterval( function() {
+      //   var wait = document.getElementById("wait");
+      //   if ( wait.innerHTML.length > 3 ) 
+      //       wait.innerHTML = "";
+      //   else 
+      //       wait.innerHTML += ".";
+      //   }, 100)`;
+      // document.body.appendChild(s);
     }
   }
   renderDesign(repoContent, finished){
@@ -68,16 +94,32 @@ class RepoDetail extends Component {
       </div>
       </div>
       `;
-    } else {
+    } else if (cookie.get("developer") === "true"){
       repoContent.innerHTML=`
       <div class="row mt-5">
-        <div class="col">
+        <div class="col" align="center">
           <embed src="/assets/download/design.pdf" width="960px" height="480px" />
         </div>
       </div>
       <div class="row mt-2">
-      <div class="col-12">
+      <div class="col-12" align="center">
       <span class="text-white">You have submitted your design! Waiting for ideaer's approval</span>
+      </div>
+          
+      </div>
+      `;
+    } else if (cookie.get("ideaer") === "true"){
+      repoContent.innerHTML=`
+      <div class="row mt-5">
+        <div class="col" align="center">
+          <embed src="/assets/download/design.pdf" width="960px" height="480px" />
+        </div>
+      </div>
+      <div class="row mt-2">
+      <div class="col-12" align="center">
+      <span class="text-white">Are you satisfied with the design?</span>
+      <button class="btn btn-success ml-2">Yes, go to the next stage</button>
+      <button class="btn btn-danger ml-2">No, contact the developers</button>
       </div>
           
       </div>
@@ -104,12 +146,12 @@ class RepoDetail extends Component {
     } else {
       repoContent.innerHTML=`
       <div class="row mt-5">
-        <div class="col">
+        <div class="col" align="center"rea>
         <iframe width="960px" height="480px" style="border:none;" src="https://github.com/khwang0/2019S-COMP3111"></iframe>
         </div>
       </div>
       <div class="row mt-2">
-      <div class="col-12">
+      <div class="col-12" align="center">
       <span class="text-white">You have submitted your design! Waiting for ideaer's approval</span>
       </div>
           
@@ -206,6 +248,79 @@ class RepoDetail extends Component {
       `;
     }
   }
+  renderDocumentation(repoContent, finished){
+    if (finished) {
+      repoContent.innerHTML=`
+      <div class="row align-items-center">
+      <div class="col-2 offset-1 title-center2">
+        <img src="/assets/images/right-tick.png" />
+      </div>
+      <div class="col-8 title-center2">
+        <h1 class="text-center text-white">Developers have finished with this part!</h1>
+      </div>
+      </div>
+      <div class="row align-items-center mt-5">
+      <div class="col" align="center">
+      <a class="btn btn-primary text-white" href="/assets/download/documentation.epub" target="_blank">Download the documentation</a>
+      </div>
+      </div>
+      `;
+    } else {
+      repoContent.innerHTML=`
+      <div class="row mt-5">
+        <div class="col" align="center"rea>
+        <iframe width="960px" height="480px" style="border:none;" src="https://github.com/khwang0/2019S-COMP3111"></iframe>
+        </div>
+      </div>
+      <div class="row mt-2">
+      <div class="col-12" align="center">
+      <span class="text-white">Please submit your documentation and wait for ideaer's approval</span>
+      </div>
+          
+      </div>
+      `;
+    }
+  }
+  renderMaintenance(repoContent, finished){
+    
+    if (finished) {
+      repoContent.innerHTML=`
+      <div class="row align-items-center">
+        <div class="col-2 offset-1 title-center2">
+          <img src="/assets/images/right-tick.png" />
+        </div>
+        <div class="col-8 title-center2">
+          <h2 class="text-center text-white">Congratulations! Your website is launched at:</h2>
+          <h2 class="text-center text-white"><a href="https://webdev-jeff.github.io/ISOM2010/" target="_blank">https://webdev-jeff.github.io/ISOM2010/</a></h2>
+        </div>
+      </div>
+      `;
+    } else if (cookie.get("developer") === "true"){
+      repoContent.innerHTML=`
+      <div class="row align-items-center">
+      <div class="col-8 offset-2 title-center2">
+        <h1 class="text-center text-white">Let's prepare to launch your product!</h1>
+      </div>
+      </div>
+      <div class="row align-items-center mt-5">
+      <div class="col" align="center">
+      <a class="btn btn-primary text-white" href="https://developer.apple.com/app-store/launch/" target="_blank">Checklist</a>
+      </div>
+      </div>
+      `;
+    } else if (cookie.get("ideaer") === "true"){
+      repoContent.innerHTML=`
+      <div class="row align-items-center">
+        <div class="col-2 offset-1 title-center2">
+          <img src="/assets/images/right-tick.png" />
+        </div>
+        <div class="col-8 title-center2">
+          <h2 class="text-center text-white">Waiting for the developers to launch the product...</h2>
+        </div>
+      </div>
+      `;
+    }
+  }
   onRadioBtnClick(rSelected) {
     this.setState({ rSelected });
     const repoContent = document.getElementById('repoContent');
@@ -215,6 +330,8 @@ class RepoDetail extends Component {
     else if (rSelected === 2) this.renderDesign(repoContent, finished)
     else if (rSelected === 3) this.renderDevelopment(repoContent, finished)
     else if (rSelected === 4) this.renderVerification(repoContent, finished)
+    else if (rSelected === 5) this.renderDocumentation(repoContent, finished)
+    else if (rSelected === 6) this.renderMaintenance(repoContent, finished)
     else repoContent.innerHTML = ""
     
   }
@@ -232,13 +349,12 @@ class RepoDetail extends Component {
             <Button color={(this.repo.stage > 5 ? "primary" : "danger")} onClick={() => this.onRadioBtnClick(5)} active={this.state.rSelected === 5}>Document</Button>
             <Button color={(this.repo.stage > 6 ? "primary" : "danger")} onClick={() => this.onRadioBtnClick(6)} active={this.state.rSelected === 6}>Maintenance</Button>
           </ButtonGroup>
-          <Button className="ml-5" color="warning">Get Insight</Button>
-          <a className="ml-5 btn btn-warning" href="/assets/download-toolkit.exe">Get Toolkit</a>
+          <a className="ml-5 btn btn-warning" href="/assets/download/report.epub">Get Insight</a>
+          <a className="ml-5 btn btn-warning" href="/assets/download/wecoop-toolkit.exe">Get Toolkit</a>
           </div>
           </div>
           <div className="align-items-center" id="repoContent">
             {/* <p id="repoContent">fd</p> */}
-
           </div>
         </div>
       );

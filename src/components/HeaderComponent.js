@@ -5,8 +5,8 @@ import {
   Form, FormGroup, Input, Label
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import Cookies from 'universal-cookie';
 import { instanceOf } from 'prop-types';
+import { cookie } from '../shared/cookie';
 
 class Header extends Component {
   constructor(props) {
@@ -32,19 +32,21 @@ class Header extends Component {
     });
   }
   toggleModal() {
-    this.setState({
-      isModalOpen: !this.state.isModalOpen
-    });
+  this.setState({
+    isModalOpen: !this.state.isModalOpen
+  });
   }
   handleLogin(event) {
     this.toggleModal();
     // this.cookie.set("login", true, { path: '/' });
-    if (this.username.value == "developer" && this.password.value == this.state.users.filter((e) => e.username=="developer")[0].password) {
-      this.login = true;
-      this.user = "developer";
-    } else if (this.username.value == "ideaer" && this.password.value == this.state.users.filter((e) => e.username=="ideaer")[0].password) {
-      this.login = true;
-      this.user = "ideaer";
+    if (this.username.value === "developer" && this.password.value === this.state.users.filter((e) => e.username==="developer")[0].password) {
+      cookie.set("login", "true", {path: '/'});
+      // this.user = "developer";
+      cookie.set('developer', "true", { path: '/' });
+    } else if (this.username.value === "ideaer" && this.password.value === this.state.users.filter((e) => e.username==="ideaer")[0].password) {
+      cookie.set("login", "true", {path: '/'});
+      // this.user = "ideaer";
+      cookie.set('ideaer', "true", { path: '/' });
     } else {
       alert("User: " + this.username.value + " does not exist!");
     }
@@ -55,12 +57,14 @@ class Header extends Component {
   }
   handleLogout(event) {
     // this.cookie.set("login", false, { path: '/' });
-    this.login = false;
+    cookie.set("login", "false", {path: '/'});
+    if (cookie.get("ideaer") === "true") cookie.set("ideaer", "false", {path: '/'})
+    else if (cookie.get("developer") === "true") cookie.set("developer", "false", {path: '/'})
     event.preventDefault();
     window.location.reload();
   }
   renderLoginLogout() {
-    if (this.login) {
+    if (cookie.get("login") !== "false") {
       return (
         <Button outline onClick={this.handleLogout}><span className="fa fa-sign-in fa-lg"> Log out</span></Button>
       )
@@ -71,7 +75,7 @@ class Header extends Component {
     }
   }
   renderProject() {
-    if (this.login) {
+    if (cookie.get("login") !== "false") {
       return (
         <React.Fragment>
           <NavItem>
