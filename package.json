@@ -2,7 +2,7 @@
   "name": "wecoop",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://webdev-jeff.github.io/WECOOP/",
+  "homepage": "https://wecoop.herokuapp.com/",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-social": "^5.1.1",
