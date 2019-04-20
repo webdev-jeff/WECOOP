@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, Button } from 'reactstrap';
+import React from 'react';
+import { Card, CardText, CardBody, CardTitle, Button } from 'reactstrap';
 
 function RenderPrice({ price }) {
   // const n_features = price.features.length;
