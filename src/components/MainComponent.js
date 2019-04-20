@@ -19,6 +19,7 @@ import RepoDetail from './RepoDetailComponent';
 import { PROJECTS } from '../shared/projects';
 import NotLogin from './NotLoginComponent';
 import PrivateRoute from './PrivateRoute';
+import { CONTACTINFO } from '../shared/contactInfo';
 
 class Main extends Component {
   constructor(props) {
@@ -30,7 +31,8 @@ class Main extends Component {
       transparentHeader: ['/home', '/pricing'],
       features: FEATURES,
       repositories: REPOSITORIES,
-      projects: PROJECTS
+      projects: PROJECTS,
+      contactInfo: CONTACTINFO
     }
   }
   render() {
@@ -56,10 +58,10 @@ class Main extends Component {
           <Route path="/features" component={() => <Features features={this.state.features} />} />
           <Route exact path="/" render={() => (<Redirect to="/home" />)} />
           <Route path="/pricing" component={() => <Pricing prices={this.state.prices} />} />
-          <Route path="/project" component={() => <Project projects={this.state.projects} />} />
-          <Route exact path="/repository" component={() => <Repository repositories={this.state.repositories} />} />
-          <Route path="/repository/:repoId" component={RepoWithId} />
-          <Route path="/contactus" component={Contact} />
+          <PrivateRoute path="/project" component={() => <Project projects={this.state.projects} />} />
+          <PrivateRoute exact path="/repository" component={() => <Repository repositories={this.state.repositories} />} />
+          <PrivateRoute path="/repository/:repoId" component={RepoWithId} />
+          <Route path="/contactus" component={() => <Contact contactInfo={this.state.contactInfo}/>} />
           <Route path="/notlogin" component={NotLogin} />
           <Route component={NotFound} />
         </Switch>

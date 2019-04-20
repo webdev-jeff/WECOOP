@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Button, ButtonGroup } from 'reactstrap';
-import { Link } from 'react-router-dom';
 import { cookie } from '../shared/cookie';
 
 class RepoDetail extends Component {

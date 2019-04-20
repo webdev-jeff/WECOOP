@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardHeader, Input, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label } from 'reactstrap';
-import { ListGroup, ListGroupItem } from 'reactstrap';
 import { cookie } from '../shared/cookie';
 
 function RenderProjectListForDeveloper({ project }) {

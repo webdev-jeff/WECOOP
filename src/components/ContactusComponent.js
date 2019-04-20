@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
-import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col, FormFeedback } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Button, Form, FormGroup, Label, Input, Col, FormFeedback, Media } from 'reactstrap';
+
+function RenderContactInfo({info}){
+  return (
+    <div className="col-5 pt-3">
+      <Media>
+        <Media left href="#">
+          <Media object src={info.src} alt={info.name} style={{maxHeight: 128}}/>
+        </Media>
+        <Media body className="pl-3 pt-2">
+          <Media heading>
+            {info.name}
+          </Media>
+            {info.role} <br/>
+            <a href={"mailto:"+info.email} className="text-muted">Contact me</a>
+        </Media>
+      </Media>
+    </div>
+  )
+}
 
 class Contact extends Component {
   constructor(props){
@@ -20,6 +38,7 @@ class Contact extends Component {
         email: false
       }
     };
+    this.contactInfo = props.contactInfo;
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
@@ -70,10 +89,13 @@ class Contact extends Component {
   }
   render() {
     const errors = this.validate(this.state.firstname, this.state.lastname, this.state.telnum, this.state.email);
+    const contactInfo = this.contactInfo.map((info) => <RenderContactInfo info={info} id={info.id}/>)
     return (
       <div className="container">
- 
-        <div className="row row-content pt-xl-5 mt-xl-5 text-white">
+        <div className="row row-content pt-5 mt-5  text-white">
+          {contactInfo}
+        </div>
+        <div className="row row-content pt-5 text-white">
           <div className="col-12">
             <h3>Send us Your Feedback</h3>
           </div>
