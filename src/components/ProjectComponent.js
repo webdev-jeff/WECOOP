@@ -3,13 +3,19 @@ import { Card, CardBody, CardHeader, Input, Button, Modal, ModalHeader, ModalBod
 import { cookie } from '../shared/cookie';
 
 function RenderProjectListForDeveloper({ project }) {
+  function renderRequirement() {
+    return {__html: project.requirement.join('<br />')};
+  }
+  function renderContactInfo() {
+    return {__html: project.contact.join('<br />')};
+  }
   return (
     <div className="row align-items-center ml-0 mr-0 pl-0 pr-0">
       <div className="col-12 mt-5">
         <Card>
-          <CardHeader className="bg-dark text-white">
+          <CardHeader className="bg-dark text-white align-items-center">
             {project.title}
-            <button className="btn btn-light btn-sm" src="" style={{ position: 'absolute', right: 5 }}>Get more information</button>
+            <button className="btn btn-light btn-sm" src="" style={{ position: 'absolute', right: "7px", top: "9px" }}>Get more information</button>
           </CardHeader>
           <CardBody>
             <div className="container pl-0 pr-0 ml-0 mr-0">
@@ -23,9 +29,9 @@ function RenderProjectListForDeveloper({ project }) {
                     <dt className="col-6">Application due date</dt>
                     <dd className="col-6">{project.appDueDate}</dd>
                     <dt className="col-6">Requirement</dt>
-                    <dd className="col-6">{project.requirement}</dd>
+                    <dd className="col-6" dangerouslySetInnerHTML={renderRequirement()}></dd>
                     <dt className="col-6">Contact</dt>
-                    <dd className="col-6">{project.contact}</dd>
+                    <dd className="col-6" dangerouslySetInnerHTML={renderContactInfo()}></dd>
                   </dl>
                 </div>
                 <div className="col-12 col-md-6 offset-1">
@@ -83,13 +89,13 @@ class Project extends Component {
     } else if (cookie.get("ideaer") === "true") {
       return (
         <div className="col-12">
-          <div className="row" style={{ paddingTop: 100 }}>
-            <div className="col-4 offset-1">
+          <div className="row ml-0 mr-0" style={{ paddingTop: 100 }}>
+            <div className="col-8">
               <Input placeholder="You can search all projects here" />
             </div>
-            <div className="col-4 offset-1">
+            <div className="col-3 offset-1 pr-0">
               <React.Fragment>
-                <Button onClick={this.toggleModal} className="btn-primary">Or publish your project here</Button>
+                <Button outline onClick={this.toggleModal} color="light" style={{width: "300px"}}>Or publish your project here</Button>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                   <ModalHeader toggle={this.toggleModal}>Publish your project</ModalHeader>
                   <ModalBody>

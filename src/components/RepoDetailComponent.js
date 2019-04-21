@@ -102,7 +102,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row mt-2">
       <div class="col-12" align="center">
-      <span class="text-white">You have submitted your design! Waiting for ideaer's approval</span>
+      <span class="text-white">You have submitted your design! Waiting for ideaer's approval...</span>
       </div>
           
       </div>
@@ -151,7 +151,7 @@ class RepoDetail extends Component {
       </div>
       <div class="row mt-2">
       <div class="col-12" align="center">
-      <span class="text-white">You have submitted your design! Waiting for ideaer's approval</span>
+      <span class="text-white">You have submitted your design! Waiting for ideaer's approval..</span>
       </div>
           
       </div>

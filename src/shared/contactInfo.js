@@ -4,14 +4,14 @@ export const CONTACTINFO = [
     "name": "Claudia",
     "email": "cftanaka@connect.ust.hk",
     "role": "some random role in the group",
-    "src": "/assets/photoes/default.png",
+    "src": "/assets/photoes/claudia.png",
   },
   {
     "id": 1,
     "name": "Grace",
     "email": "hjungabab@connect.ust.hk",
     "role": "some random role in the group",
-    "src": "/assets/photoes/default.png",
+    "src": "/assets/photoes/grace.png",
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@ export const CONTACTINFO = [
     "name": "King",
     "email": "hktamab@connect.ust.hk",
     "role": "some random role in the group",
-    "src": "/assets/photoes/default.png",
+    "src": "/assets/photoes/king.png",
   },
   {
     "id": 4,

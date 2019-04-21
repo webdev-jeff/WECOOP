@@ -1,38 +1,42 @@
 export const PRICING = [
   {
     "id": 0,
-    "name": "Basic",
+    "name": "Standard",
+    "category": "ideaer",
     "price": "2.99",
     "features": [
-    "cheap",
-    "good",
-    "free"
+    "Limited projects publish",
     ]
   },
   {
     "id": 1,
-    "name": "Advanced",
+    "name": "Professional",
+    "category": "ideaer",
     "price": "9.99",
     "features": [
-    "cheap2",
-    "good2",
-    "free2",
-    "cheap23",
-    "good23",
-    "free23"
+    "Unlimited projects publish",
+    "Big data insight",
     ]
   },
   {
     "id": 2,
-    "name": "Professional",
-    "price": "19.99",
+    "name": "Standard",
+    "category": "developer",
+    "price": "0",
     "features": [
-    "cheap24",
-    "good24",
-    "free24",
-    "cheap234",
-    "good234",
-    "free234"
+    "Development toolkit",
+    "Local test environment",
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Professional",
+    "category": "developer",
+    "price": "2.99",
+    "features": [
+    "Development toolkit",
+    "Local test envrionment",
+    "Big data insight",
     ]
   }
 ];

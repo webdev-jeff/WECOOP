@@ -39,10 +39,22 @@
   height: 100vh;
 }
 
-.pricing-card{
+.pricing-card-body{
   /* background-color: #000000; */
   /* background-color: rgba(52,58,64,0.1); */
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  background-color: rgba(0,0,0,0.3) !important;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.pricing-card-headline{
+  /* background-color: #000000; */
+  /* background-color: rgba(52,58,64,0.1); */
+  /* opacity: 0.8; */
+  background-color: rgba(0,0,0,0.3) !important;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .title-center{
@@ -116,7 +128,7 @@
 }
 .texture-5{
   color: #e5895f;
-  background-image: url("/assets/images/texture8.jpg");
+  background-image: url("/assets/images/texture9.jpg");
 }
 .big-type { 
   /* Copied almost wholesale from the Apple site CSS; changed the font-stack */
@@ -127,7 +139,7 @@
 }
 
 .wecoop{
-  color: whitesmoke;
+  /* color: royalblue; */
   /* background-image: url("/assets/images-bg-img.jpg"); */
   font-family: "Halo";
   /* text-shadow: -0.06em 0 red, 0.06em 0 cyan; */
@@ -150,4 +162,16 @@
 .feature-text-2{
   font-size: 25px;
   font-weight: 200
+}
+
+.bg-ideaer{
+  background-image: linear-gradient(#4ca6e9, #4f93f6) !important;
+}
+
+.bg-developer{
+  background-image: linear-gradient(#926cbd, #796bbc) !important;
+}
+
+.pricing-button{
+  background-color: rgba(0,0,0,0.5);
 }
