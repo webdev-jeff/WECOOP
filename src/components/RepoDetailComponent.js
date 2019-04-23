@@ -21,17 +21,17 @@ class RepoDetail extends Component {
     if (finished) {
       repoContent.innerHTML=`
       <div class="row align-items-center">
-      <div class="col-2 offset-2 title-center2">
-        <img src="/assets/images/right-tick.png" />
-      </div>
-      <div class="col-6 title-center2">
-        <h1 class="text-center text-white">You have finished this part!</h1>
-      </div>
+        <div class="col-2 offset-2 title-center2">
+          <img src="/assets/images/right-tick.png" />
+        </div>
+        <div class="col-6 title-center2">
+          <h1 class="text-center text-white">You have finished this part!</h1>
+        </div>
       </div>
       <div class="row align-items-center mt-5">
-      <div class="col" align="center">
-      <a class="btn btn-primary text-white" href="/assets/download/requirement.pdf" target="_blank">Download the requirement</a>
-      </div>
+        <div class="col" align="center">
+          <a class="btn btn-primary text-white" href="/assets/download/requirement.pdf" target="_blank">Download the requirement</a>
+        </div>
       </div>
       `;
     } else if (cookie.get("developer") === "true"){
@@ -42,11 +42,11 @@ class RepoDetail extends Component {
         </div>
       </div>
       <div class="row mt-2">
-      <div class="col-12" align="center">
-      <span class="text-white">Are you satisfied with the requirement?</span>
-      <button class="btn btn-success ml-2">Yes, go to the next stage</button>
-      <button class="btn btn-danger ml-2">No, contact the ideaer</button>
-      </div>
+        <div class="col-12" align="center">
+          <span class="text-white">Are you satisfied with the requirement?</span>
+          <button class="btn btn-success ml-2">Yes, go to the next stage</button>
+          <button class="btn btn-danger ml-2">No, contact the ideaer</button>
+        </div>
       </div>
       `;
     } else if (cookie.get("ideaer") === "true"){
@@ -57,11 +57,10 @@ class RepoDetail extends Component {
         </div>
       </div>
       <div class="row mt-2">
-      <div class="col-12" align="center">
-      <p class="text-white">You have successfully uploaded your idea!</p>
-      <p class="text-white">Pending for others' agreement <span id="wait>...</span> 6 / 10</p>
-      </div>
-          
+        <div class="col-12" align="center">
+          <p class="text-white">You have successfully uploaded your idea!</p>
+          <p class="text-white">Pending for others' agreement <span id="wait>...</span> 6 / 10</p>
+        </div> 
       </div>
       `;
       // const s = document.createElement('script');
@@ -80,17 +79,17 @@ class RepoDetail extends Component {
     if (finished) {
       repoContent.innerHTML=`
       <div class="row align-items-center">
-      <div class="col-2 offset-2 title-center2">
-        <img src="/assets/images/right-tick.png" />
-      </div>
-      <div class="col-6 title-center2">
-        <h1 class="text-center text-white">You have finished this part!</h1>
-      </div>
+        <div class="col-2 offset-2 title-center2">
+          <img src="/assets/images/right-tick.png" />
+        </div>
+        <div class="col-6 title-center2">
+          <h1 class="text-center text-white">You have finished this part!</h1>
+        </div>
       </div>
       <div class="row align-items-center mt-5">
-      <div class="col" align="center">
-      <a class="btn btn-primary text-white" href="/assets/download/design.pdf" target="_blank">Download the design</a>
-      </div>
+        <div class="col" align="center">
+          <a class="btn btn-primary text-white" href="/assets/download/design.pdf" target="_blank">Download the design</a>
+        </div>
       </div>
       `;
     } else if (cookie.get("developer") === "true"){
@@ -101,10 +100,9 @@ class RepoDetail extends Component {
         </div>
       </div>
       <div class="row mt-2">
-      <div class="col-12" align="center">
-      <span class="text-white">You have submitted your design! Waiting for ideaer's approval...</span>
-      </div>
-          
+        <div class="col-12" align="center">
+          <span class="text-white">You have submitted your design! Waiting for ideaer's approval...</span>
+        </div>
       </div>
       `;
     } else if (cookie.get("ideaer") === "true"){
@@ -115,12 +113,11 @@ class RepoDetail extends Component {
         </div>
       </div>
       <div class="row mt-2">
-      <div class="col-12" align="center">
-      <span class="text-white">Are you satisfied with the design?</span>
-      <button class="btn btn-success ml-2">Yes, go to the next stage</button>
-      <button class="btn btn-danger ml-2">No, contact the developers</button>
-      </div>
-          
+        <div class="col-12" align="center">
+          <span class="text-white">Are you satisfied with the design?</span>
+          <button class="btn btn-success ml-2">Yes, go to the next stage</button>
+          <button class="btn btn-danger ml-2">No, contact the developers</button>
+        </div> 
       </div>
       `;
     }
@@ -128,32 +125,41 @@ class RepoDetail extends Component {
   renderDevelopment(repoContent, finished){
     if (finished) {
       repoContent.innerHTML=`
-      <div class="row align-items-center">
-      <div class="col-2 offset-2 title-center2">
-        <img src="/assets/images/right-tick.png" />
-      </div>
-      <div class="col-6 title-center2">
-        <h1 class="text-center text-white">You have finished this part!</h1>
-      </div>
-      </div>
-      <div class="row align-items-center mt-5">
-      <div class="col" align="center">
-      <a class="btn btn-primary text-white" href="/assets/download/design.pdf" target="_blank">Download the design</a>
-      </div>
-      </div>
-      `;
-    } else {
-      repoContent.innerHTML=`
       <div class="row mt-5">
-        <div class="col" align="center"rea>
-        <iframe width="960px" height="480px" style="border:none;" src="https://github.com/khwang0/2019S-COMP3111"></iframe>
+        <div class="col" align="center">
+          <img src="/assets/images/development.png" width="85%"/>
         </div>
       </div>
       <div class="row mt-2">
-      <div class="col-12" align="center">
-      <span class="text-white">You have submitted your design! Waiting for ideaer's approval..</span>
+        <div class="col-12" align="center">
+          <span class="text-white">This part is finished!</span>
+        </div>
       </div>
-          
+      `;
+    } else if (cookie.get("developer") === "true"){
+      repoContent.innerHTML=`
+      <div class="row mt-5">
+        <div class="col" align="center">
+          <img src="/assets/images/development.png" width="85%"/>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12" align="center">
+          <span class="text-white">You have finished with your code! Waiting for ideaer's approval..</span>
+        </div>
+      </div>
+      `;
+    } else if (cookie.get("ideaer") === "true"){
+      repoContent.innerHTML=`
+      <div class="row mt-5">
+        <div class="col" align="center">
+        <img src="/assets/images/development.png" width="85%"/>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12" align="center">
+          <span class="text-white">Developers have finished with his code. Please check verification page.</span>
+        </div> 
       </div>
       `;
     }
@@ -251,37 +257,53 @@ class RepoDetail extends Component {
     if (finished) {
       repoContent.innerHTML=`
       <div class="row align-items-center">
-      <div class="col-2 offset-1 title-center2">
-        <img src="/assets/images/right-tick.png" />
-      </div>
-      <div class="col-8 title-center2">
-        <h1 class="text-center text-white">Developers have finished with this part!</h1>
-      </div>
+        <div class="col-2 offset-1 title-center2">
+          <img src="/assets/images/right-tick.png" />
+        </div>
+        <div class="col-8 title-center2">
+          <h1 class="text-center text-white">Developers have finished with this part!</h1>
+        </div>
       </div>
       <div class="row align-items-center mt-5">
-      <div class="col" align="center">
-      <a class="btn btn-primary text-white" href="/assets/download/documentation.epub" target="_blank">Download the documentation</a>
-      </div>
+        <div class="col" align="center">
+          <a class="btn btn-primary text-white" href="/assets/download/documentation.epub" target="_blank">Download the documentation</a>
+        </div>
       </div>
       `;
-    } else {
+    } else if (cookie.get("developer") === "true"){
       repoContent.innerHTML=`
       <div class="row mt-5">
-        <div class="col" align="center"rea>
-        <iframe width="960px" height="480px" style="border:none;" src="https://github.com/khwang0/2019S-COMP3111"></iframe>
+        <div class="col" align="center">
+          
         </div>
       </div>
       <div class="row mt-2">
-      <div class="col-12" align="center">
-      <span class="text-white">Please submit your documentation and wait for ideaer's approval</span>
+        <div class="col-12" align="center">
+          <span class="text-white">Please </span>
+          <label for="files" class="btn btn-primary">Submit</label>
+          <input id="files" style="visibility:hidden; width: 0px" type="file">
+          <span class="text-white">your documentation and wait for ideaer's approval.</span>
+        </div> 
       </div>
-          
+      `;
+    } else if (cookie.get("ideaer") === "true"){
+      repoContent.innerHTML=`
+      <div class="row mt-5">
+        <div class="col" align="center">
+          <embed src="/assets/download/design.pdf" width="960px" height="480px" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12" align="center">
+          <span class="text-white">Are you satisfied with the documentation?</span>
+          <button class="btn btn-success ml-2">Yes, go to the next stage</button>
+          <button class="btn btn-danger ml-2">No, contact the developers</button>
+        </div> 
       </div>
       `;
     }
   }
   renderMaintenance(repoContent, finished){
-    
     if (finished) {
       repoContent.innerHTML=`
       <div class="row align-items-center">
@@ -297,14 +319,14 @@ class RepoDetail extends Component {
     } else if (cookie.get("developer") === "true"){
       repoContent.innerHTML=`
       <div class="row align-items-center">
-      <div class="col-8 offset-2 title-center2">
-        <h1 class="text-center text-white">Let's prepare to launch your product!</h1>
-      </div>
+        <div class="col-8 offset-2 title-center2">
+          <h1 class="text-center text-white">Let's prepare to launch your product!</h1>
+        </div>
       </div>
       <div class="row align-items-center mt-5">
-      <div class="col" align="center">
-      <a class="btn btn-primary text-white" href="https://developer.apple.com/app-store/launch/" target="_blank">Checklist</a>
-      </div>
+        <div class="col" align="center">
+          <a class="btn btn-primary text-white" href="https://developer.apple.com/app-store/launch/" target="_blank">Checklist</a>
+        </div>
       </div>
       `;
     } else if (cookie.get("ideaer") === "true"){

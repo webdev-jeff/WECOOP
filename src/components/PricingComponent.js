@@ -1,19 +1,27 @@
 import React from 'react';
-import { Card, CardText, CardBody, CardTitle, Button } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle, Button, CardSubtitle } from 'reactstrap';
 
 function RenderPrice({ price, numPlans, max_n_features }) {
   const n_features = price.features.length;
   const features = price.features.map((feature) =>
     <CardText>{feature}</CardText>
   );
-  // const features_blank = <CardText><p></p></CardText>;
   const features_blank = Array.from({length: max_n_features - n_features}, (x,i) => i).map(() => <CardText>{<br />}</CardText>);
   const col_class = "col-" + 12 / (numPlans.developer + numPlans.ideaer);
+  const ColoredLine = ({ color }) => (
+    <hr style={{ color: color, backgroundColor: color, height: 0.4 }} />
+  );
+  const RenderCardFeatureTitle = () => (
+    <CardSubtitle className="mb-1 font-weight-bold" style={{fontSize: "30px"}}>Features</CardSubtitle>
+  );
   if (price.category === "ideaer"){
     return (
       <div className={col_class + " text-center"}>
         <Card body outline color="primary" className="pricing-card-body text-white">
             <CardTitle className="pricing-title">{price.name}</CardTitle>
+            <CardText style={{height: "145px"}}>{price.description}</CardText>
+            <ColoredLine color="#007bff"/>
+            <RenderCardFeatureTitle />
             {features}
             {features_blank}
             <CardText><span>$ <span style={{fontSize: "50px"}}>{price.price}</span> / month</span></CardText>
@@ -28,6 +36,9 @@ function RenderPrice({ price, numPlans, max_n_features }) {
           <CardBody> */}
           <Card  body outline color="info" className="pricing-card-body text-white">
             <CardTitle className="pricing-title">{price.name}</CardTitle>
+            <CardText style={{height: "145px"}}>{price.description}</CardText>
+            <ColoredLine color="#17a2b8"/>
+            <RenderCardFeatureTitle />
             {features}
             {features_blank}
             <CardText>{ price.price === "0"
