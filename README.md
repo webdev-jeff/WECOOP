@@ -1,3 +1,3 @@
 Source code brannch for this project.
 
-Maintained using yarn.
+Maintained using `yarn`.
